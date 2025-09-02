@@ -25,7 +25,15 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <img src="/logo-icon.svg" alt="ProHack" className="h-10 w-10" />
+            <img 
+              src="/logo-icon.svg" 
+              alt="ProHack Logo" 
+              className="h-10 w-10"
+              onError={(e) => {
+                console.error('Logo failed to load:', e);
+                e.currentTarget.style.display = 'none';
+              }}
+            />
             <div className="flex flex-col">
               <span className="font-display font-bold text-xl bg-gradient-primary bg-clip-text text-transparent">
                 ProHack
