@@ -1,0 +1,25 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0EA5E9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Shield Icon -->
+  <path d="M12 3L12 3C12 3 16 1 24 3C32 1 36 3 36 3L36 15C36 24 30 30 24 34C18 30 12 24 12 15L12 3Z" fill="url(#logoGradient)" stroke="#0EA5E9" stroke-width="1"/>
+  
+  <!-- Lock in Shield -->
+  <rect x="20" y="16" width="8" height="6" rx="1" fill="#0B1220"/>
+  <path d="M21 16V14C21 13.5 21.5 13 22 13H26C26.5 13 27 13.5 27 14V16" stroke="#E2E8F0" stroke-width="1" fill="none"/>
+  
+  <!-- Circuit Lines -->
+  <line x1="18" y1="12" x2="20" y2="12" stroke="#10B981" stroke-width="1"/>
+  <line x1="28" y1="12" x2="30" y2="12" stroke="#10B981" stroke-width="1"/>
+  <circle cx="17" cy="12" r="1" fill="#10B981"/>
+  <circle cx="31" cy="12" r="1" fill="#10B981"/>
+  
+  <!-- ProHack Text -->
+  <text x="50" y="25" font-family="Inter Tight, sans-serif" font-size="24" font-weight="700" fill="url(#logoGradient)">ProHack</text>
+  <text x="50" y="42" font-family="Inter, sans-serif" font-size="10" font-weight="400" fill="#64748B" letter-spacing="0.5px">CYBERSECURITY COM PRECISÃO E RESULTADO</text>
+</svg>
