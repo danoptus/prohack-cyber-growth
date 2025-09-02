@@ -32,7 +32,6 @@ const Servicos = () => {
         "ROI médio de 300% em remediação",
         "Compliance com frameworks regulatórios"
       ],
-      pricing: "A partir de R$ 15.000",
       duration: "2-4 semanas"
     },
     {
@@ -62,7 +61,6 @@ const Servicos = () => {
         "Redução de 70% no tempo de detecção",
         "ROI positivo em 60 dias"
       ],
-      pricing: "R$ 8.000/mês",
       duration: "Serviço contínuo"
     },
     {
@@ -92,7 +90,6 @@ const Servicos = () => {
         "99.9% de uptime do SOC",
         "Redução de 90% em falsos positivos"
       ],
-      pricing: "R$ 25.000/mês",
       duration: "Contrato 12 meses"
     },
     {
@@ -122,7 +119,6 @@ const Servicos = () => {
         "99% de sucesso na contenção",
         "Tempo médio de recuperação < 24h"
       ],
-      pricing: "R$ 5.000 + R$ 500/hora",
       duration: "Retainer + On-demand"
     },
     {
@@ -152,7 +148,6 @@ const Servicos = () => {
         "Redução de 60% em riscos críticos",
         "Aprovação do board em 90 dias"
       ],
-      pricing: "R$ 18.000/mês",
       duration: "Contrato 6-12 meses"
     },
     {
@@ -182,7 +177,6 @@ const Servicos = () => {
         "100% de knowledge transfer",
         "Satisfação do cliente > 9/10"
       ],
-      pricing: "R$ 2.500/dia ou pacotes",
       duration: "2-12 semanas"
     }
   ];
@@ -215,8 +209,7 @@ const Servicos = () => {
                     </div>
                   </div>
                   <div className="text-right">
-                    <Badge variant="secondary" className="mb-2">{service.pricing}</Badge>
-                    <p className="text-sm text-muted-foreground">{service.duration}</p>
+                    <Badge variant="outline" className="text-xs">{service.duration}</Badge>
                   </div>
                 </div>
                 <p className="text-muted-foreground mt-4">{service.description}</p>
