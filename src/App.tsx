@@ -10,7 +10,6 @@ import Servicos from "./pages/Servicos";
 import Metodologia from "./pages/Metodologia";
 import Cases from "./pages/Cases";
 import Sobre from "./pages/Sobre";
-import Blog from "./pages/Blog";
 import Contato from "./pages/Contato";
 import Privacidade from "./pages/Privacidade";
 import Brand from "./pages/Brand";
@@ -33,7 +32,6 @@ const App = () => (
               <Route path="/metodologia" element={<Metodologia />} />
               <Route path="/cases" element={<Cases />} />
               <Route path="/sobre" element={<Sobre />} />
-              <Route path="/blog" element={<Blog />} />
               <Route path="/contato" element={<Contato />} />
               <Route path="/privacidade" element={<Privacidade />} />
               <Route path="/brand" element={<Brand />} />

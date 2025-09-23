@@ -13,7 +13,6 @@ const Navbar = () => {
     { name: "Metodologia", href: "/metodologia" },
     { name: "Cases", href: "/cases" },
     { name: "Sobre", href: "/sobre" },
-    { name: "Blog", href: "/blog" },
     { name: "Contato", href: "/contato" },
   ];
 
