@@ -270,9 +270,6 @@ const Servicos = () => {
                   <Button className="btn-cyber">
                     Solicitar Proposta
                   </Button>
-                  <Button variant="outline">
-                    Agendar Discovery Call
-                  </Button>
                 </div>
               </CardContent>
             </Card>
