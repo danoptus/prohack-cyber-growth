@@ -355,14 +355,10 @@ const Contato = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground">
                   <strong>São Paulo - SP, Brasil</strong><br />
                   Atendemos todo território nacional remotamente.<br />
                   Presencial disponível para projetos na Grande São Paulo.
-                </p>
-                <p className="text-sm text-muted-foreground">
-                  CNPJ: XX.XXX.XXX/XXXX-XX<br />
-                  Inscrição Estadual: XXXXXXXXX
                 </p>
               </CardContent>
             </Card>
