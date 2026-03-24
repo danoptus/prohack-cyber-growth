@@ -200,33 +200,6 @@ const Sobre = () => {
           </Card>
         </section>
 
-        {/* Journey */}
-        <section className="mb-20">
-          <Card className="card-cyber">
-            <CardHeader className="text-center">
-              <CardTitle className="text-2xl">{t("about.journeyTitle")}</CardTitle>
-              <p className="text-muted-foreground">{t("about.journeySubtitle")}</p>
-            </CardHeader>
-            <CardContent className="p-8">
-              <div className="space-y-8">
-                {[
-                  { year: "2020", color: "bg-primary" },
-                  { year: "2021", color: "bg-primary" },
-                  { year: "2022", color: "bg-primary" },
-                  { year: "2023", color: "bg-secondary" },
-                  { year: "2024", color: "bg-accent-warning" }
-                ].map((item) => (
-                  <div key={item.year} className="flex items-start space-x-4">
-                    <div className={`w-4 h-4 ${item.color} rounded-full mt-2 flex-shrink-0`}></div>
-                    <div>
-                      <h4 className="font-semibold text-foreground">{item.year}</h4>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-        </section>
 
         {/* CTA */}
         <div className="text-center">
