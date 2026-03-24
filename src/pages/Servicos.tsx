@@ -2,8 +2,11 @@ import { Target, Shield, Zap, CheckCircle, Users, BarChart3, Clock, Award } from
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useTranslation } from "react-i18next";
 
 const Servicos = () => {
+  const { t } = useTranslation();
+
   const services = [
     {
       id: "pentest",
@@ -137,7 +140,7 @@ const Servicos = () => {
       ],
       deliverables: [
         "Estratégia de segurança alinhada ao negócio",
-        "Políticas e procedimentos estruturados", 
+        "Políticas e procedimentos estruturados",
         "Risk Register atualizado mensalmente",
         "KPIs e KRIs executivos",
         "Plano de continuidade de negócios"
@@ -186,16 +189,19 @@ const Servicos = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="heading-xl mb-6">Nossos Serviços</h1>
+          <h1 className="heading-xl mb-6">{t("services.title")}</h1>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-            Soluções completas de cybersecurity com metodologia comprovada e foco em resultados mensuráveis. 
-            Cada serviço é projetado para entregar <span className="text-primary font-semibold">métricas que o board entende</span>.
+            {t("services.subtitle").split("<highlight>")[0]}
+            <span className="text-primary font-semibold">
+              {t("services.subtitle").match(/<highlight>(.*?)<\/highlight>/)?.[1]}
+            </span>
+            {t("services.subtitle").split("</highlight>")[1]}
           </p>
         </div>
 
         {/* Services Grid */}
         <div className="space-y-20">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <Card key={service.id} id={service.id} className="card-cyber overflow-hidden">
               <CardHeader className="border-b border-border">
                 <div className="flex items-start justify-between">
@@ -217,11 +223,10 @@ const Servicos = () => {
 
               <CardContent className="p-8">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                  {/* Metodologia */}
                   <div>
                     <h4 className="font-semibold text-foreground mb-4 flex items-center">
                       <CheckCircle className="mr-2 text-secondary" size={18} />
-                      Metodologia
+                      {t("services.methodology")}
                     </h4>
                     <ul className="space-y-2">
                       {service.methodology.map((item, idx) => (
@@ -233,11 +238,10 @@ const Servicos = () => {
                     </ul>
                   </div>
 
-                  {/* Entregáveis */}
                   <div>
                     <h4 className="font-semibold text-foreground mb-4 flex items-center">
                       <Target className="mr-2 text-secondary" size={18} />
-                      Entregáveis
+                      {t("services.deliverables")}
                     </h4>
                     <ul className="space-y-2">
                       {service.deliverables.map((item, idx) => (
@@ -249,11 +253,10 @@ const Servicos = () => {
                     </ul>
                   </div>
 
-                  {/* Métricas */}
                   <div>
                     <h4 className="font-semibold text-foreground mb-4 flex items-center">
                       <BarChart3 className="mr-2 text-secondary" size={18} />
-                      Resultados Esperados
+                      {t("services.expectedResults")}
                     </h4>
                     <ul className="space-y-2">
                       {service.metrics.map((metric, idx) => (
@@ -268,7 +271,7 @@ const Servicos = () => {
 
                 <div className="flex flex-col sm:flex-row gap-4 mt-8 pt-6 border-t border-border">
                   <Button className="btn-cyber">
-                    Solicitar Proposta
+                    {t("services.requestProposal")}
                   </Button>
                 </div>
               </CardContent>
@@ -279,16 +282,16 @@ const Servicos = () => {
         {/* CTA Section */}
         <div className="text-center mt-20">
           <Card className="card-cyber p-12">
-            <h2 className="heading-md mb-4">Precisa de uma Solução Customizada?</h2>
+            <h2 className="heading-md mb-4">{t("services.customTitle")}</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Combinamos nossos serviços para criar uma solução sob medida para suas necessidades específicas de segurança.
+              {t("services.customSubtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="btn-cyber">
-                Falar com Especialista
+                {t("services.talkExpert")}
               </Button>
               <Button variant="outline">
-                Ver Casos de Sucesso
+                {t("services.viewCases")}
               </Button>
             </div>
           </Card>

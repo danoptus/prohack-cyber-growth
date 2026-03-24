@@ -2,61 +2,51 @@ import { ArrowRight, Shield, Zap, Target, Clock, CheckCircle, AlertTriangle } fr
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hero-cyber.jpg";
+import { useTranslation } from "react-i18next";
 
 const Index = () => {
+  const { t } = useTranslation();
   const whatsappUrl = "https://wa.me/5511996652416?text=Tenho%20um%20incidente%20de%20seguran%C3%A7a%20e%20preciso%20de%20ajuda%20imediata.";
 
   const services = [
     {
-      title: "Penetration Testing",
-      description: "Testes de invasão completos com relatórios executivos e técnicos",
+      title: t("home.servicePentest"),
+      description: t("home.servicePentestDesc"),
       icon: Target,
-      features: ["Escopo completo", "Relatório executivo + técnico", "Reteste incluído", "PoCs detalhados"]
+      features: [t("home.featureScope"), t("home.featureExecReport"), t("home.featureRetest"), t("home.featurePocs")]
     },
     {
-      title: "SOC 24/7",
-      description: "Monitoramento contínuo de segurança com resposta imediata",
+      title: t("home.serviceSoc"),
+      description: t("home.serviceSocDesc"),
       icon: Shield,
-      features: ["Monitoramento 24/7", "SLA < 15min", "Playbooks customizados", "Relatórios mensais"]
+      features: [t("home.feature247"), t("home.featureSla"), t("home.featurePlaybooks"), t("home.featureMonthly")]
     },
     {
-      title: "Resposta a Incidentes",
-      description: "Resposta rápida e coordenada a incidentes de segurança",
+      title: t("home.serviceIr"),
+      description: t("home.serviceIrDesc"),
       icon: Zap,
-      features: ["Resposta < 1h", "Contenção imediata", "Análise forense", "Plano de recuperação"]
+      features: [t("home.featureResponse1h"), t("home.featureContainment"), t("home.featureForensics"), t("home.featureRecovery")]
     },
     {
-      title: "vCISO",
-      description: "CISO virtual para governança estratégica de segurança",
+      title: t("home.serviceVciso"),
+      description: t("home.serviceVcisoDesc"),
       icon: CheckCircle,
-      features: ["Governança estratégica", "Risk Register", "Políticas e normas", "Relatórios ao board"]
+      features: [t("home.featureGovernance"), t("home.featureRiskRegister"), t("home.featurePolicies"), t("home.featureBoardReports")]
     }
   ];
 
   const metrics = [
-    { number: "< 24h", label: "MTTR médio" },
-    { number: "95%", label: "Cobertura de patches" },
-    { number: "ISO 27001", label: "Conformidade" },
-    { number: "24/7", label: "Disponibilidade SOC" }
+    { number: "< 24h", label: t("home.metricMttr") },
+    { number: "95%", label: t("home.metricPatches") },
+    { number: "ISO 27001", label: t("home.metricCompliance") },
+    { number: "24/7", label: t("home.metricSoc") }
   ];
 
   const faqs = [
-    {
-      question: "Qual o tempo de resposta para incidentes críticos?",
-      answer: "Nosso SLA para incidentes críticos é de resposta em até 1 hora, com contenção inicial em até 4 horas. Para emergências, temos o Botão de Pânico com resposta imediata via WhatsApp."
-    },
-    {
-      question: "Como funciona o processo de pentest?",
-      answer: "Seguimos a metodologia baseada no Cyber Kill Chain: reconnaissance, scanning, exploitation, post-exploitation e relatórios. Entregamos relatório executivo para o board e técnico para as equipes, com reteste incluído."
-    },
-    {
-      question: "Vocês trabalham com empresas de que porte?",
-      answer: "Atendemos desde startups até grandes corporações. Nossos serviços são escaláveis e adaptados ao porte e maturidade de cada organização."
-    },
-    {
-      question: "Qual a diferença entre SOC e monitoramento tradicional?",
-      answer: "Nosso SOC vai além do monitoramento: inclui threat hunting ativo, análise comportamental, resposta automatizada via SOAR e relatórios executivos com métricas de negócio."
-    }
+    { question: t("home.faq1q"), answer: t("home.faq1a") },
+    { question: t("home.faq2q"), answer: t("home.faq2a") },
+    { question: t("home.faq3q"), answer: t("home.faq3a") },
+    { question: t("home.faq4q"), answer: t("home.faq4a") }
   ];
 
   return (
@@ -75,18 +65,21 @@ const Index = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
             <h1 className="heading-xl mb-6 fade-in">
-              ProHack — Cybersecurity com precisão e resultado
+              {t("home.heroTitle")}
             </h1>
             
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl slide-up">
-              Pentest, SOC, Resposta a Incidentes, vCISO e Gestão de Vulnerabilidades, 
-              com <span className="text-primary font-semibold">métricas que o board entende</span>.
+              {t("home.heroSubtitle").split("<highlight>")[0]}
+              <span className="text-primary font-semibold">
+                {t("home.heroSubtitle").match(/<highlight>(.*?)<\/highlight>/)?.[1]}
+              </span>
+              {t("home.heroSubtitle").split("</highlight>")[1]}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <a href="#contato">
                 <Button className="btn-cyber text-lg px-8 py-4">
-                  Falar com Especialista
+                  {t("home.ctaExpert")}
                   <ArrowRight className="ml-2" size={20} />
                 </Button>
               </a>
@@ -94,7 +87,7 @@ const Index = () => {
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
                 <Button className="btn-panic text-lg px-8 py-4">
                   <AlertTriangle className="mr-2" size={20} />
-                  Botão de Pânico: Incidente Agora
+                  {t("home.ctaPanic")}
                 </Button>
               </a>
             </div>
@@ -103,15 +96,15 @@ const Index = () => {
             <div className="flex flex-wrap items-center gap-8 text-sm text-muted-foreground">
               <div className="flex items-center gap-2">
                 <CheckCircle size={16} className="text-secondary" />
-                <span>ISO 27001 Aligned</span>
+                <span>{t("home.trustIso")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle size={16} className="text-secondary" />
-                <span>NIST CSF</span>
+                <span>{t("home.trustNist")}</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle size={16} className="text-secondary" />
-                <span>LGPD Compliance</span>
+                <span>{t("home.trustLgpd")}</span>
               </div>
             </div>
           </div>
@@ -140,9 +133,9 @@ const Index = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="heading-lg mb-4">Serviços que Entregam Resultados</h2>
+            <h2 className="heading-lg mb-4">{t("home.servicesTitle")}</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Soluções completas de cybersecurity com foco em governança executiva e métricas de negócio.
+              {t("home.servicesSubtitle")}
             </p>
           </div>
 
@@ -166,7 +159,7 @@ const Index = () => {
                     ))}
                   </ul>
                   <Button variant="outline" className="w-full">
-                    Saiba Mais
+                    {t("home.learnMore")}
                   </Button>
                 </CardContent>
               </Card>
@@ -179,9 +172,9 @@ const Index = () => {
       <section className="py-20 bg-card/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="heading-lg mb-4">Perguntas Frequentes</h2>
+            <h2 className="heading-lg mb-4">{t("home.faqTitle")}</h2>
             <p className="text-xl text-muted-foreground">
-              Esclareça suas dúvidas sobre nossos serviços
+              {t("home.faqSubtitle")}
             </p>
           </div>
 
@@ -199,22 +192,22 @@ const Index = () => {
       {/* CTA Final */}
       <section id="contato" className="py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="heading-lg mb-6">Pronto para Elevar sua Segurança?</h2>
+          <h2 className="heading-lg mb-6">{t("home.ctaTitle")}</h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Receba uma avaliação inicial gratuita e descubra como podemos fortalecer suas defesas digitais.
+            {t("home.ctaSubtitle")}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="/contato">
               <Button className="btn-cyber text-lg px-8 py-4">
-                Solicitar Avaliação Gratuita
+                {t("home.ctaButton")}
                 <ArrowRight className="ml-2" size={20} />
               </Button>
             </a>
             
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="btn-secondary text-lg px-8 py-4">
-                WhatsApp Direto
+                {t("home.ctaWhatsapp")}
               </Button>
             </a>
           </div>

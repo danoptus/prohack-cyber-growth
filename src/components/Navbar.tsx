@@ -1,22 +1,38 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X, AlertTriangle, Phone } from "lucide-react";
+import { Menu, X, AlertTriangle, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+const languages = [
+  { code: "pt", label: "Português", flag: "🇧🇷" },
+  { code: "en", label: "English", flag: "🇺🇸" },
+  { code: "fr", label: "Français", flag: "🇫🇷" },
+  { code: "it", label: "Italiano", flag: "🇮🇹" },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t, i18n } = useTranslation();
 
   const navItems = [
-    { name: "Home", href: "/" },
-    { name: "Serviços", href: "/servicos" },
-    { name: "Metodologia", href: "/metodologia" },
-    { name: "Cases", href: "/cases" },
-    { name: "Sobre", href: "/sobre" },
-    { name: "Contato", href: "/contato" },
+    { name: t("nav.home"), href: "/" },
+    { name: t("nav.services"), href: "/servicos" },
+    { name: t("nav.methodology"), href: "/metodologia" },
+    { name: t("nav.cases"), href: "/cases" },
+    { name: t("nav.about"), href: "/sobre" },
+    { name: t("nav.contact"), href: "/contato" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
+  const currentLang = languages.find((l) => l.code === i18n.language) || languages[0];
 
   return (
     <nav className="sticky top-0 z-50 bg-background-secondary/95 backdrop-blur-sm border-b border-border">
@@ -45,7 +61,7 @@ const Navbar = () => {
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
-                key={item.name}
+                key={item.href}
                 to={item.href}
                 className={`text-sm font-medium transition-colors duration-200 ${
                   isActive(item.href)
@@ -58,19 +74,21 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop CTAs */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <PanicButton />
+          {/* Desktop CTAs + Language */}
+          <div className="hidden lg:flex items-center space-x-3">
+            <LanguageSwitcher currentLang={currentLang} i18n={i18n} />
+            <PanicButton t={t} />
             <Link to="/contato">
               <Button variant="outline" size="sm">
-                Falar com Especialista
+                {t("nav.talkExpert")}
               </Button>
             </Link>
           </div>
 
           {/* Mobile menu button */}
           <div className="lg:hidden flex items-center space-x-2">
-            <PanicButton mobile />
+            <LanguageSwitcher currentLang={currentLang} i18n={i18n} mobile />
+            <PanicButton mobile t={t} />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-foreground hover:text-primary transition-colors"
@@ -87,7 +105,7 @@ const Navbar = () => {
             <div className="flex flex-col space-y-3">
               {navItems.map((item) => (
                 <Link
-                  key={item.name}
+                  key={item.href}
                   to={item.href}
                   onClick={() => setIsOpen(false)}
                   className={`text-sm font-medium px-3 py-2 rounded-lg transition-colors ${
@@ -101,7 +119,7 @@ const Navbar = () => {
               ))}
               <Link to="/contato" onClick={() => setIsOpen(false)}>
                 <Button variant="outline" className="w-full mt-4">
-                  Falar com Especialista
+                  {t("nav.talkExpert")}
                 </Button>
               </Link>
             </div>
@@ -112,8 +130,34 @@ const Navbar = () => {
   );
 };
 
+// Language Switcher Component
+const LanguageSwitcher = ({ currentLang, i18n, mobile = false }: { currentLang: typeof languages[0]; i18n: any; mobile?: boolean }) => {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="ghost" size={mobile ? "icon" : "sm"} className="gap-1.5">
+          <Globe size={16} />
+          {!mobile && <span className="text-xs">{currentLang.flag} {currentLang.code.toUpperCase()}</span>}
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end" className="min-w-[140px]">
+        {languages.map((lang) => (
+          <DropdownMenuItem
+            key={lang.code}
+            onClick={() => i18n.changeLanguage(lang.code)}
+            className={`cursor-pointer ${i18n.language === lang.code ? "bg-primary/10 text-primary" : ""}`}
+          >
+            <span className="mr-2">{lang.flag}</span>
+            {lang.label}
+          </DropdownMenuItem>
+        ))}
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
+};
+
 // Botão de Pânico Component
-const PanicButton = ({ mobile = false }: { mobile?: boolean }) => {
+const PanicButton = ({ mobile = false, t }: { mobile?: boolean; t: any }) => {
   const whatsappUrl = "https://wa.me/5511996652416?text=Tenho%20um%20incidente%20de%20seguran%C3%A7a%20e%20preciso%20de%20ajuda%20imediata.";
 
   return (
@@ -122,10 +166,10 @@ const PanicButton = ({ mobile = false }: { mobile?: boolean }) => {
       target="_blank"
       rel="noopener noreferrer"
       className={`btn-panic inline-flex items-center gap-2 ${mobile ? "px-3 py-2" : "px-4 py-2"}`}
-      aria-label="Botão de emergência para incidentes de segurança"
+      aria-label={t("nav.panicAria")}
     >
       <AlertTriangle size={mobile ? 16 : 18} />
-      {!mobile && <span className="font-bold">Incidente? Fale Agora!</span>}
+      {!mobile && <span className="font-bold">{t("nav.panicButton")}</span>}
     </a>
   );
 };
