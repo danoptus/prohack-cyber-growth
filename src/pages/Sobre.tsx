@@ -129,31 +129,6 @@ const Sobre = () => {
           </Card>
         </section>
 
-        {/* Team */}
-        <section className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="heading-lg mb-4">{t("about.teamTitle")}</h2>
-            <p className="text-lg text-muted-foreground">{t("about.teamSubtitle")}</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="card-cyber">
-                <CardContent className="p-6 text-center">
-                  <div className="text-6xl mb-4">{member.avatar}</div>
-                  <h3 className="font-bold text-foreground mb-1">{member.name}</h3>
-                  <p className="text-primary font-medium mb-2">{member.role}</p>
-                  <p className="text-sm text-muted-foreground mb-4">{member.specialization}</p>
-                  <div className="flex flex-wrap gap-1 mb-4 justify-center">
-                    {member.certifications.map((cert, idx) => (
-                      <span key={idx} className="text-xs bg-secondary/10 text-secondary px-2 py-1 rounded">{cert}</span>
-                    ))}
-                  </div>
-                  <p className="text-xs text-muted-foreground">{member.bio}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </section>
 
         {/* Differentials */}
         <section className="mb-20">
