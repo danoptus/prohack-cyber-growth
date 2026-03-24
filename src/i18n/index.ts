@@ -6,6 +6,7 @@ import pt from './locales/pt.json';
 import en from './locales/en.json';
 import fr from './locales/fr.json';
 import it from './locales/it.json';
+import es from './locales/es.json';
 
 i18n
   .use(LanguageDetector)
