@@ -6,7 +6,7 @@ const Footer = () => {
           {/* Logo e Descrição */}
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
-              <img src="/logo-icon.svg" alt="ProHack" className="h-10 w-10" />
+              <img src="/logo-icon.png" alt="ProHack" className="h-10 w-10" />
               <div>
                 <span className="font-display font-bold text-xl bg-gradient-primary bg-clip-text text-transparent">
                   ProHack

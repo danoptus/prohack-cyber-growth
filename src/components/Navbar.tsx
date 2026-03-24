@@ -25,7 +25,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src="/logo-icon.svg" 
+              src="/logo-icon.png" 
               alt="ProHack Logo" 
               className="h-10 w-10"
               onError={(e) => {
