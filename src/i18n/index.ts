@@ -28,7 +28,7 @@ i18n
     interpolation: {
       escapeValue: false,
     },
-    supportedLngs: ['pt', 'en', 'fr', 'it'],
+    supportedLngs: ['pt', 'en', 'fr', 'it', 'es'],
   });
 
 export default i18n;
