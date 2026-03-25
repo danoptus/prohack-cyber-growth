@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
+import SEOHead from "@/components/SEOHead";
+import { breadcrumbSchema } from "@/lib/seo-schemas";
 
 const Cases = () => {
   const { t } = useTranslation();
