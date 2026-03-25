@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hero-cyber.jpg";
 import { useTranslation } from "react-i18next";
+import SEOHead from "@/components/SEOHead";
+import { organizationSchema, websiteSchema, faqSchema, professionalServiceSchema, breadcrumbSchema } from "@/lib/seo-schemas";
 
 const Index = () => {
   const { t } = useTranslation();
