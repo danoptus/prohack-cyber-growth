@@ -19,6 +19,25 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+    },
+    cssMinify: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          i18n: ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
+          ui: ['@radix-ui/react-tooltip', '@radix-ui/react-dialog'],
+        },
+      },
+    },
+  },
   optimizeDeps: {
     include: ['react', 'react-dom', 'react-i18next', 'i18next', 'i18next-browser-languagedetector', '@radix-ui/react-tooltip'],
   },
