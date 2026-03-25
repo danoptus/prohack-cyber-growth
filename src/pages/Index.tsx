@@ -151,7 +151,8 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">{t("home.servicesTitle")}</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              {t("home.servicesSubtitle")}
+              {t("home.servicesSubtitle")}{" "}
+              <Link to="/metodologia" className="text-primary hover:underline">{t("home.learnMore")}</Link>
             </p>
           </div>
 
