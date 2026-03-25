@@ -122,14 +122,6 @@ const Metodologia = () => {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-3">{t("methodology.tools")}</h4>
-                    <div className="flex flex-wrap gap-1">
-                      {step.tools.map((tool, idx) => (
-                        <span key={idx} className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">{tool}</span>
-                      ))}
-                    </div>
-                  </div>
-                  <div>
                     <h4 className="font-semibold text-foreground mb-3">{t("methodology.deliverables")}</h4>
                     <ul className="space-y-1">
                       {step.deliverables.map((deliverable, idx) => (
