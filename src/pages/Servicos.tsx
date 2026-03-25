@@ -269,11 +269,6 @@ const Servicos = () => {
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 mt-8 pt-6 border-t border-border">
-                  <Button className="btn-cyber">
-                    {t("services.requestProposal")}
-                  </Button>
-                </div>
               </CardContent>
             </Card>
           ))}
