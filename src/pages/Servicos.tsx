@@ -10,177 +10,177 @@ const Servicos = () => {
   const services = [
     {
       id: "pentest",
-      title: "Penetration Testing",
+      title: t("servicesPage.pentest.title"),
       icon: Target,
-      tagline: "Testes de invasão com precisão executiva",
-      description: "Simulamos ataques reais para identificar vulnerabilidades críticas antes dos cibercriminosos. Metodologia baseada no Cyber Kill Chain com foco em resultados mensuráveis para o board.",
+      tagline: t("servicesPage.pentest.tagline"),
+      description: t("servicesPage.pentest.description"),
       methodology: [
-        "Reconnaissance e OSINT",
-        "Vulnerability Assessment",
-        "Exploitation e PoC",
-        "Post-exploitation e Pivoting",
-        "Relatórios executivo + técnico",
-        "Reteste e validação"
+        t("servicesPage.pentest.method1"),
+        t("servicesPage.pentest.method2"),
+        t("servicesPage.pentest.method3"),
+        t("servicesPage.pentest.method4"),
+        t("servicesPage.pentest.method5"),
+        t("servicesPage.pentest.method6")
       ],
       deliverables: [
-        "Relatório Executivo com risk score e ROI de remediação",
-        "Relatório Técnico com PoCs e scripts de exploração",
-        "Plano de Remediação priorizado por criticidade",
-        "Reteste após correções (incluído no pacote)",
-        "Apresentação executiva para stakeholders"
+        t("servicesPage.pentest.deliv1"),
+        t("servicesPage.pentest.deliv2"),
+        t("servicesPage.pentest.deliv3"),
+        t("servicesPage.pentest.deliv4"),
+        t("servicesPage.pentest.deliv5")
       ],
       metrics: [
-        "MTTR < 30 dias para críticos",
-        "Redução de 80%+ em vulnerabilidades críticas",
-        "ROI médio de 300% em remediação",
-        "Compliance com frameworks regulatórios"
+        t("servicesPage.pentest.metric1"),
+        t("servicesPage.pentest.metric2"),
+        t("servicesPage.pentest.metric3"),
+        t("servicesPage.pentest.metric4")
       ],
-      duration: "2-4 semanas"
+      duration: t("servicesPage.pentest.duration")
     },
     {
       id: "vuln",
-      title: "Gestão de Vulnerabilidades",
+      title: t("servicesPage.vuln.title"),
       icon: BarChart3,
-      tagline: "Visibilidade contínua do risco cibernético",
-      description: "Programa contínuo de identificação, priorização e remediação de vulnerabilidades com métricas executivas e dashboards em tempo real.",
+      tagline: t("servicesPage.vuln.tagline"),
+      description: t("servicesPage.vuln.description"),
       methodology: [
-        "Asset Discovery automatizado",
-        "Scanning contínuo (interno/externo)",
-        "Priorização por CVSS + contexto de negócio",
-        "Workflow de remediação integrado",
-        "Métricas MTTR/MTTD/MTTV",
-        "Relatórios executivos mensais"
+        t("servicesPage.vuln.method1"),
+        t("servicesPage.vuln.method2"),
+        t("servicesPage.vuln.method3"),
+        t("servicesPage.vuln.method4"),
+        t("servicesPage.vuln.method5"),
+        t("servicesPage.vuln.method6")
       ],
       deliverables: [
-        "Dashboard executivo com KPIs de risco",
-        "Inventário de ativos atualizado",
-        "Risk Register com classificação por criticidade",
-        "SLAs de remediação por severidade",
-        "Relatórios de compliance automatizados"
+        t("servicesPage.vuln.deliv1"),
+        t("servicesPage.vuln.deliv2"),
+        t("servicesPage.vuln.deliv3"),
+        t("servicesPage.vuln.deliv4"),
+        t("servicesPage.vuln.deliv5")
       ],
       metrics: [
-        "MTTR < 72h para vulnerabilidades críticas",
-        "95%+ de cobertura de ativos",
-        "Redução de 70% no tempo de detecção",
-        "ROI positivo em 60 dias"
+        t("servicesPage.vuln.metric1"),
+        t("servicesPage.vuln.metric2"),
+        t("servicesPage.vuln.metric3"),
+        t("servicesPage.vuln.metric4")
       ],
-      duration: "Serviço contínuo"
+      duration: t("servicesPage.vuln.duration")
     },
     {
       id: "soc",
-      title: "SOC - Security Operations Center",
+      title: t("servicesPage.soc.title"),
       icon: Shield,
-      tagline: "Monitoramento 24/7 com resposta inteligente",
-      description: "Centro de operações de segurança com analistas especializados, SIEM avançado e resposta automatizada via SOAR. Detecção proativa e resposta coordenada.",
+      tagline: t("servicesPage.soc.tagline"),
+      description: t("servicesPage.soc.description"),
       methodology: [
-        "Coleta de logs (EDR, NDR, SIEM)",
-        "Correlação e análise de eventos",
-        "Threat Hunting proativo",
-        "Resposta automatizada (SOAR)",
-        "Escalation matrix por severidade",
-        "Threat Intelligence integrado"
+        t("servicesPage.soc.method1"),
+        t("servicesPage.soc.method2"),
+        t("servicesPage.soc.method3"),
+        t("servicesPage.soc.method4"),
+        t("servicesPage.soc.method5"),
+        t("servicesPage.soc.method6")
       ],
       deliverables: [
-        "Dashboard de segurança em tempo real",
-        "SLA de resposta: 15min (crítico), 1h (alto)",
-        "Playbooks de resposta customizados",
-        "Relatórios de incidentes detalhados",
-        "Métricas mensais de eficácia"
+        t("servicesPage.soc.deliv1"),
+        t("servicesPage.soc.deliv2"),
+        t("servicesPage.soc.deliv3"),
+        t("servicesPage.soc.deliv4"),
+        t("servicesPage.soc.deliv5")
       ],
       metrics: [
-        "MTTD < 15 minutos",
-        "MTTR < 4 horas",
-        "99.9% de uptime do SOC",
-        "Redução de 90% em falsos positivos"
+        t("servicesPage.soc.metric1"),
+        t("servicesPage.soc.metric2"),
+        t("servicesPage.soc.metric3"),
+        t("servicesPage.soc.metric4")
       ],
-      duration: "Contrato 12 meses"
+      duration: t("servicesPage.soc.duration")
     },
     {
       id: "incident",
-      title: "Resposta a Incidentes",
+      title: t("servicesPage.incident.title"),
       icon: Zap,
-      tagline: "Resposta rápida e coordenada",
-      description: "Equipe especializada em contenção, erradicação e recuperação de incidentes de segurança. Disponibilidade 24/7 com metodologia estruturada.",
+      tagline: t("servicesPage.incident.tagline"),
+      description: t("servicesPage.incident.description"),
       methodology: [
-        "Preparação e playbooks",
-        "Detecção e análise inicial",
-        "Contenção e isolamento",
-        "Erradicação da ameaça",
-        "Recuperação e monitoramento",
-        "Lessons learned e melhoria contínua"
+        t("servicesPage.incident.method1"),
+        t("servicesPage.incident.method2"),
+        t("servicesPage.incident.method3"),
+        t("servicesPage.incident.method4"),
+        t("servicesPage.incident.method5"),
+        t("servicesPage.incident.method6")
       ],
       deliverables: [
-        "Resposta imediata < 1 hora",
-        "Plano de contenção executado",
-        "Análise forense completa",
-        "Relatório post-mortem com recomendações",
-        "Roadmap de hardening"
+        t("servicesPage.incident.deliv1"),
+        t("servicesPage.incident.deliv2"),
+        t("servicesPage.incident.deliv3"),
+        t("servicesPage.incident.deliv4"),
+        t("servicesPage.incident.deliv5")
       ],
       metrics: [
-        "RTO < 4 horas",
-        "RPO < 1 hora",
-        "99% de sucesso na contenção",
-        "Tempo médio de recuperação < 24h"
+        t("servicesPage.incident.metric1"),
+        t("servicesPage.incident.metric2"),
+        t("servicesPage.incident.metric3"),
+        t("servicesPage.incident.metric4")
       ],
-      duration: "Retainer + On-demand"
+      duration: t("servicesPage.incident.duration")
     },
     {
       id: "vciso",
-      title: "vCISO - Virtual CISO",
+      title: t("servicesPage.vciso.title"),
       icon: Users,
-      tagline: "Governança estratégica de segurança",
-      description: "CISO virtual para organizações que precisam de governança estratégica sem o custo de um CISO full-time. Foco em resultados de negócio e compliance.",
+      tagline: t("servicesPage.vciso.tagline"),
+      description: t("servicesPage.vciso.description"),
       methodology: [
-        "Assessment de maturidade inicial",
-        "Definição de estratégia e roadmap",
-        "Implementação de políticas e processos",
-        "Gestão de riscos e compliance",
-        "Relatórios executivos mensais",
-        "Gestão de fornecedores e auditores"
+        t("servicesPage.vciso.method1"),
+        t("servicesPage.vciso.method2"),
+        t("servicesPage.vciso.method3"),
+        t("servicesPage.vciso.method4"),
+        t("servicesPage.vciso.method5"),
+        t("servicesPage.vciso.method6")
       ],
       deliverables: [
-        "Estratégia de segurança alinhada ao negócio",
-        "Políticas e procedimentos estruturados",
-        "Risk Register atualizado mensalmente",
-        "KPIs e KRIs executivos",
-        "Plano de continuidade de negócios"
+        t("servicesPage.vciso.deliv1"),
+        t("servicesPage.vciso.deliv2"),
+        t("servicesPage.vciso.deliv3"),
+        t("servicesPage.vciso.deliv4"),
+        t("servicesPage.vciso.deliv5")
       ],
       metrics: [
-        "ROI de 400%+ vs CISO full-time",
-        "100% de compliance regulatório",
-        "Redução de 60% em riscos críticos",
-        "Aprovação do board em 90 dias"
+        t("servicesPage.vciso.metric1"),
+        t("servicesPage.vciso.metric2"),
+        t("servicesPage.vciso.metric3"),
+        t("servicesPage.vciso.metric4")
       ],
-      duration: "Contrato 6-12 meses"
+      duration: t("servicesPage.vciso.duration")
     },
     {
       id: "consulting",
-      title: "Consultoria Especializada",
+      title: t("servicesPage.consulting.title"),
       icon: Award,
-      tagline: "Expertise sob demanda",
-      description: "Projetos específicos e consultoria especializada em hardening, arquitetura de segurança, Zero Trust, Cloud Security e compliance regulatório.",
+      tagline: t("servicesPage.consulting.tagline"),
+      description: t("servicesPage.consulting.description"),
       methodology: [
-        "Discovery e assessment",
-        "Arquitetura e design",
-        "Implementação guiada",
-        "Transferência de conhecimento",
-        "Documentação técnica",
-        "Suporte pós-implementação"
+        t("servicesPage.consulting.method1"),
+        t("servicesPage.consulting.method2"),
+        t("servicesPage.consulting.method3"),
+        t("servicesPage.consulting.method4"),
+        t("servicesPage.consulting.method5"),
+        t("servicesPage.consulting.method6")
       ],
       deliverables: [
-        "Arquitetura de segurança detalhada",
-        "Guias de implementação step-by-step",
-        "Scripts e automações",
-        "Treinamento das equipes internas",
-        "Roadmap de evolução"
+        t("servicesPage.consulting.deliv1"),
+        t("servicesPage.consulting.deliv2"),
+        t("servicesPage.consulting.deliv3"),
+        t("servicesPage.consulting.deliv4"),
+        t("servicesPage.consulting.deliv5")
       ],
       metrics: [
-        "Redução de 50% no tempo de projeto",
-        "ROI positivo em 90 dias",
-        "100% de knowledge transfer",
-        "Satisfação do cliente > 9/10"
+        t("servicesPage.consulting.metric1"),
+        t("servicesPage.consulting.metric2"),
+        t("servicesPage.consulting.metric3"),
+        t("servicesPage.consulting.metric4")
       ],
-      duration: "2-12 semanas"
+      duration: t("servicesPage.consulting.duration")
     }
   ];
 

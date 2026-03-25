@@ -9,49 +9,49 @@ const Cases = () => {
 
   const cases = [
     {
-      id: 1, title: "Fintech - Redução de 85% em Vulnerabilidades Críticas",
-      industry: "Fintech", company: "Empresa de Pagamentos (Série B)",
-      challenge: "Alta exposição a riscos cibernéticos com múltiplas vulnerabilidades críticas em ambiente de pagamentos digitais",
-      solution: "Pentest completo + Programa de Gestão de Vulnerabilidades + vCISO",
-      duration: "6 meses", teamSize: "50-100 colaboradores",
-      services: ["Penetration Testing", "Gestão de Vulnerabilidades", "vCISO"],
+      id: 1, title: t("casesPage.case1.title"),
+      industry: t("casesPage.case1.industry"), company: t("casesPage.case1.company"),
+      challenge: t("casesPage.case1.challenge"),
+      solution: t("casesPage.case1.solution"),
+      duration: t("casesPage.case1.duration"), teamSize: t("casesPage.case1.teamSize"),
+      services: [t("casesPage.case1.svc1"), t("casesPage.case1.svc2"), t("casesPage.case1.svc3")],
       results: [
-        { metric: "85%", description: "Redução em vulnerabilidades críticas" },
-        { metric: "< 24h", description: "MTTR para vulnerabilidades críticas" },
-        { metric: "100%", description: "Compliance PCI-DSS alcançado" },
-        { metric: "ROI 400%", description: "Retorno sobre investimento em 12 meses" }
+        { metric: "85%", description: t("casesPage.case1.result1") },
+        { metric: "< 24h", description: t("casesPage.case1.result2") },
+        { metric: "100%", description: t("casesPage.case1.result3") },
+        { metric: "ROI 400%", description: t("casesPage.case1.result4") }
       ],
       testimonial: {
-        quote: "A ProHack transformou nossa postura de segurança. Em 6 meses, saímos de uma situação crítica para compliance total, com métricas claras que conseguimos apresentar ao board.",
+        quote: t("casesPage.case1.quote"),
         author: "CTO", role: "Chief Technology Officer"
       },
       timeline: [
-        { phase: "Mês 1-2", activity: "Assessment inicial + Pentest + Plano estratégico" },
-        { phase: "Mês 3-4", activity: "Implementação de controles + Programa de vulnerabilidades" },
-        { phase: "Mês 5-6", activity: "Reteste + Certificação PCI-DSS + Governance" }
+        { phase: t("casesPage.case1.phase1"), activity: t("casesPage.case1.activity1") },
+        { phase: t("casesPage.case1.phase2"), activity: t("casesPage.case1.activity2") },
+        { phase: t("casesPage.case1.phase3"), activity: t("casesPage.case1.activity3") }
       ]
     },
     {
-      id: 2, title: "E-commerce - SOC 24/7 com MTTR < 15 Minutos",
-      industry: "E-commerce", company: "Marketplace Nacional (Líder de Mercado)",
-      challenge: "Ataques constantes durante Black Friday, necessidade de monitoramento 24/7 e resposta rápida a incidentes",
-      solution: "SOC-as-a-Service + Resposta a Incidentes + Threat Intelligence",
-      duration: "12 meses (ongoing)", teamSize: "200+ colaboradores",
-      services: ["SOC 24/7", "Resposta a Incidentes", "Threat Intelligence"],
+      id: 2, title: t("casesPage.case2.title"),
+      industry: t("casesPage.case2.industry"), company: t("casesPage.case2.company"),
+      challenge: t("casesPage.case2.challenge"),
+      solution: t("casesPage.case2.solution"),
+      duration: t("casesPage.case2.duration"), teamSize: t("casesPage.case2.teamSize"),
+      services: [t("casesPage.case2.svc1"), t("casesPage.case2.svc2"), t("casesPage.case2.svc3")],
       results: [
-        { metric: "< 15min", description: "MTTD - Mean Time to Detection" },
-        { metric: "< 1h", description: "MTTR para incidentes críticos" },
-        { metric: "99.9%", description: "Uptime durante Black Friday" },
-        { metric: "Zero", description: "Incidentes com impacto no negócio" }
+        { metric: "< 15min", description: t("casesPage.case2.result1") },
+        { metric: "< 1h", description: t("casesPage.case2.result2") },
+        { metric: "99.9%", description: t("casesPage.case2.result3") },
+        { metric: t("casesPage.case2.zeroMetric"), description: t("casesPage.case2.result4") }
       ],
       testimonial: {
-        quote: "Durante a Black Friday, nossa equipe conseguiu dormir tranquila sabendo que a ProHack estava monitorando 24/7. Zero incidentes impactaram nosso faturamento.",
+        quote: t("casesPage.case2.quote"),
         author: "CISO", role: "Chief Information Security Officer"
       },
       timeline: [
-        { phase: "Mês 1", activity: "Setup do SOC + Integração de ferramentas + Playbooks" },
-        { phase: "Mês 2-3", activity: "Tuning de alertas + Treinamento + Threat Hunting" },
-        { phase: "Mês 4+", activity: "Operação contínua + Melhorias + Relatórios executivos" }
+        { phase: t("casesPage.case2.phase1"), activity: t("casesPage.case2.activity1") },
+        { phase: t("casesPage.case2.phase2"), activity: t("casesPage.case2.activity2") },
+        { phase: t("casesPage.case2.phase3"), activity: t("casesPage.case2.activity3") }
       ]
     }
   ];
