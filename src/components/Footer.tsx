@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
@@ -9,42 +10,42 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo e Descrição */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <img src="/logo-icon.png" alt="ProHack" className="h-10 w-10" />
+            <Link to="/" className="flex items-center space-x-3">
+              <img src="/logo-icon.png" alt="ProHack Cybersecurity" className="h-10 w-10" loading="lazy" />
               <div>
                 <span className="font-display font-bold text-xl bg-gradient-primary bg-clip-text text-transparent">
                   ProHack
                 </span>
                 <p className="text-xs text-muted-foreground">{t("footer.tagline")}</p>
               </div>
-            </div>
+            </Link>
             <p className="text-sm text-muted-foreground">
               {t("footer.description")}
             </p>
           </div>
 
           {/* Serviços */}
-          <div>
+          <nav aria-label="Services">
             <h3 className="font-semibold text-foreground mb-4">{t("footer.services")}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="/servicos#pentest" className="hover:text-primary transition-colors">Penetration Testing</a></li>
-              <li><a href="/servicos#vuln" className="hover:text-primary transition-colors">{t("contact.serviceOptions.vuln")}</a></li>
-              <li><a href="/servicos#soc" className="hover:text-primary transition-colors">SOC 24/7</a></li>
-              <li><a href="/servicos#incident" className="hover:text-primary transition-colors">{t("home.serviceIr")}</a></li>
-              <li><a href="/servicos#vciso" className="hover:text-primary transition-colors">vCISO</a></li>
+              <li><Link to="/servicos#pentest" className="hover:text-primary transition-colors">Penetration Testing</Link></li>
+              <li><Link to="/servicos#vuln" className="hover:text-primary transition-colors">{t("contact.serviceOptions.vuln")}</Link></li>
+              <li><Link to="/servicos#soc" className="hover:text-primary transition-colors">SOC 24/7</Link></li>
+              <li><Link to="/servicos#incident" className="hover:text-primary transition-colors">{t("home.serviceIr")}</Link></li>
+              <li><Link to="/servicos#vciso" className="hover:text-primary transition-colors">vCISO</Link></li>
             </ul>
-          </div>
+          </nav>
 
           {/* Links */}
-          <div>
+          <nav aria-label="Company">
             <h3 className="font-semibold text-foreground mb-4">{t("footer.links")}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="/metodologia" className="hover:text-primary transition-colors">{t("nav.methodology")}</a></li>
-              <li><a href="/cases" className="hover:text-primary transition-colors">{t("nav.cases")}</a></li>
-              <li><a href="/sobre" className="hover:text-primary transition-colors">{t("nav.about")}</a></li>
-              <li><a href="/brand" className="hover:text-primary transition-colors">Brand Kit</a></li>
+              <li><Link to="/metodologia" className="hover:text-primary transition-colors">{t("nav.methodology")}</Link></li>
+              <li><Link to="/cases" className="hover:text-primary transition-colors">{t("nav.cases")}</Link></li>
+              <li><Link to="/sobre" className="hover:text-primary transition-colors">{t("nav.about")}</Link></li>
+              <li><Link to="/contato" className="hover:text-primary transition-colors">{t("nav.contact")}</Link></li>
             </ul>
-          </div>
+          </nav>
 
           {/* Contato */}
           <div>
@@ -81,12 +82,12 @@ const Footer = () => {
           </div>
           
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
-            <a href="/privacidade" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            <Link to="/privacidade" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               {t("footer.privacyPolicy")}
-            </a>
-            <a href="/privacidade#lgpd" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+            </Link>
+            <Link to="/privacidade#lgpd" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               LGPD
-            </a>
+            </Link>
             <div className="flex items-center space-x-2">
               <span className="text-xs text-muted-foreground">{t("footer.compliance")}</span>
               <span className="text-xs font-medium text-secondary">ISO 27001</span>
