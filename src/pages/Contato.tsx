@@ -7,6 +7,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Phone, Mail, MessageSquare, MapPin, Clock, AlertTriangle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from "react-i18next";
+import SEOHead from "@/components/SEOHead";
+import { breadcrumbSchema } from "@/lib/seo-schemas";
 
 const Contato = () => {
   const { toast } = useToast();
