@@ -67,7 +67,12 @@ const Cases = () => {
 
   return (
     <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
+      <SEOHead
+        title="Cases de Cybersecurity | Resultados Reais em Segurança"
+        description="Conheça nossos cases de sucesso em cybersecurity: pentest em fintechs, SOC para healthcare, resposta a ransomware e mais. Resultados mensuráveis e comprovados."
+        keywords="cases cybersecurity, pentest fintech, SOC healthcare, resposta ransomware, resultados segurança, case study cybersecurity"
+        jsonLd={breadcrumbSchema([{ name: "Home", url: "/" }, { name: "Cases", url: "/cases" }])}
+      />
         <div className="text-center mb-16">
           <h1 className="heading-xl mb-6">{t("cases.title")}</h1>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto">

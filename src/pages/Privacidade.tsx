@@ -1,9 +1,18 @@
 import { Shield, Eye, Lock, FileText, Mail, Phone } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import SEOHead from "@/components/SEOHead";
+import { breadcrumbSchema } from "@/lib/seo-schemas";
 
 const Privacidade = () => {
   return (
     <div className="min-h-screen py-20">
+      <SEOHead
+        title="Política de Privacidade & LGPD | ProHack"
+        description="Política de privacidade e conformidade LGPD da ProHack. Transparência sobre coleta, uso e proteção de dados pessoais."
+        keywords="política privacidade, LGPD, proteção dados, privacidade cybersecurity"
+        noindex={false}
+        jsonLd={breadcrumbSchema([{ name: "Home", url: "/" }, { name: "Privacidade", url: "/privacidade" }])}
+      />
       <div className="container mx-auto px-4 max-w-4xl">
         {/* Header */}
         <div className="text-center mb-16">

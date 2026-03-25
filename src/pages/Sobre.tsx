@@ -58,7 +58,12 @@ const Sobre = () => {
 
   return (
     <div className="min-h-screen py-20">
-      <div className="container mx-auto px-4">
+      <SEOHead
+        title="Sobre a ProHack | Consultoria Especializada em Cybersecurity"
+        description="Conheça a ProHack: consultoria B2B em cybersecurity com foco em resultados mensuráveis. Equipe certificada OSCP, OSCE, CISM, CISSP. ISO 27001 e NIST CSF."
+        keywords="sobre ProHack, equipe cybersecurity, consultoria segurança, certificações OSCP, CISM, empresa cybersecurity São Paulo"
+        jsonLd={breadcrumbSchema([{ name: "Home", url: "/" }, { name: "Sobre", url: "/sobre" }])}
+      />
         <div className="text-center mb-16">
           <h1 className="heading-xl mb-6">{t("about.title")}</h1>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
