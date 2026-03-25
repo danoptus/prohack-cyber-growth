@@ -64,6 +64,7 @@ const Sobre = () => {
         keywords="sobre ProHack, equipe cybersecurity, consultoria segurança, certificações OSCP, CISM, empresa cybersecurity São Paulo"
         jsonLd={breadcrumbSchema([{ name: "Home", url: "/" }, { name: "Sobre", url: "/sobre" }])}
       />
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="heading-xl mb-6">{t("about.title")}</h1>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto">

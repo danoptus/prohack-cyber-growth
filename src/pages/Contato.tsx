@@ -131,6 +131,7 @@ const Contato = () => {
         keywords="contato cybersecurity, solicitar pentest, proposta SOC, consultoria segurança, emergência cybersecurity, WhatsApp segurança"
         jsonLd={breadcrumbSchema([{ name: "Home", url: "/" }, { name: "Contato", url: "/contato" }])}
       />
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="heading-xl mb-6">{t("contact.title")}</h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
