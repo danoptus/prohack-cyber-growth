@@ -45,6 +45,8 @@ const Navbar = () => {
               src="/logo-icon.png" 
               alt="ProHack Logo" 
               className="h-10 w-10"
+              width={40}
+              height={40}
               onError={(e) => {
                 console.error('Logo failed to load:', e);
                 e.currentTarget.style.display = 'none';
