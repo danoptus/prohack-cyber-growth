@@ -216,12 +216,12 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contato">
+            <Link to="/contato">
               <Button className="btn-cyber text-lg px-8 py-4">
                 {t("home.ctaButton")}
                 <ArrowRight className="ml-2" size={20} />
               </Button>
-            </a>
+            </Link>
             
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="btn-secondary text-lg px-8 py-4">
