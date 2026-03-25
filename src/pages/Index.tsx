@@ -110,14 +110,14 @@ const Index = () => {
 
             {/* Trust Signals */}
             <div className="flex flex-wrap items-center gap-8 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
+              <a href="https://www.iso.org/standard/27001" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <CheckCircle size={16} className="text-secondary" />
                 <span>{t("home.trustIso")}</span>
-              </div>
-              <div className="flex items-center gap-2">
+              </a>
+              <a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <CheckCircle size={16} className="text-secondary" />
                 <span>{t("home.trustNist")}</span>
-              </div>
+              </a>
               <div className="flex items-center gap-2">
                 <CheckCircle size={16} className="text-secondary" />
                 <span>{t("home.trustLgpd")}</span>
