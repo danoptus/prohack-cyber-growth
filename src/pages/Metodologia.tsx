@@ -8,70 +8,70 @@ const Metodologia = () => {
 
   const killChainSteps = [
     {
-      phase: "1. Reconnaissance", title: "Reconhecimento",
-      description: "Coleta passiva de informações sobre o alvo", icon: Search,
-      activities: ["OSINT (Open Source Intelligence)", "DNS enumeration e subdomain discovery", "Social engineering reconnaissance", "Análise de superfície de ataque", "Mapeamento de tecnologias"],
+      phase: t("methodologyPage.step1.phase"), title: t("methodologyPage.step1.title"),
+      description: t("methodologyPage.step1.description"), icon: Search,
+      activities: [t("methodologyPage.step1.act1"), t("methodologyPage.step1.act2"), t("methodologyPage.step1.act3"), t("methodologyPage.step1.act4"), t("methodologyPage.step1.act5")],
       tools: ["Nmap", "Shodan", "TheHarvester", "Maltego", "Recon-ng"],
-      deliverables: ["Relatório de OSINT", "Mapa da infraestrutura", "Inventário de ativos expostos", "Assessment de superfície de ataque"]
+      deliverables: [t("methodologyPage.step1.deliv1"), t("methodologyPage.step1.deliv2"), t("methodologyPage.step1.deliv3"), t("methodologyPage.step1.deliv4")]
     },
     {
-      phase: "2. Scanning", title: "Varredura",
-      description: "Identificação ativa de vulnerabilidades e serviços", icon: Target,
-      activities: ["Port scanning e service enumeration", "Vulnerability assessment", "Web application scanning", "Análise de configurações", "Identificação de versões e patches"],
+      phase: t("methodologyPage.step2.phase"), title: t("methodologyPage.step2.title"),
+      description: t("methodologyPage.step2.description"), icon: Target,
+      activities: [t("methodologyPage.step2.act1"), t("methodologyPage.step2.act2"), t("methodologyPage.step2.act3"), t("methodologyPage.step2.act4"), t("methodologyPage.step2.act5")],
       tools: ["Nessus", "Burp Suite", "OWASP ZAP", "Nikto", "Qualys"],
-      deliverables: ["Relatório de vulnerabilidades", "Matriz de riscos CVSS", "Inventário de serviços", "Baseline de segurança"]
+      deliverables: [t("methodologyPage.step2.deliv1"), t("methodologyPage.step2.deliv2"), t("methodologyPage.step2.deliv3"), t("methodologyPage.step2.deliv4")]
     },
     {
-      phase: "3. Exploitation", title: "Exploração",
-      description: "Exploração controlada de vulnerabilidades identificadas", icon: Zap,
-      activities: ["Exploit development e adaptação", "Proof of Concept (PoC)", "Bypass de controles de segurança", "Privilege escalation", "Validação de impacto"],
+      phase: t("methodologyPage.step3.phase"), title: t("methodologyPage.step3.title"),
+      description: t("methodologyPage.step3.description"), icon: Zap,
+      activities: [t("methodologyPage.step3.act1"), t("methodologyPage.step3.act2"), t("methodologyPage.step3.act3"), t("methodologyPage.step3.act4"), t("methodologyPage.step3.act5")],
       tools: ["Metasploit", "Cobalt Strike", "SQLmap", "Custom Scripts", "Exploitdb"],
-      deliverables: ["PoCs funcionais", "Scripts de exploração", "Evidências de comprometimento", "Análise de impacto detalhada"]
+      deliverables: [t("methodologyPage.step3.deliv1"), t("methodologyPage.step3.deliv2"), t("methodologyPage.step3.deliv3"), t("methodologyPage.step3.deliv4")]
     },
     {
-      phase: "4. Post-Exploitation", title: "Pós-Exploração",
-      description: "Avaliação do alcance e persistência do comprometimento", icon: Shield,
-      activities: ["Lateral movement", "Data exfiltration simulation", "Persistence mechanisms", "Privilege escalation avançado", "Domain enumeration"],
+      phase: t("methodologyPage.step4.phase"), title: t("methodologyPage.step4.title"),
+      description: t("methodologyPage.step4.description"), icon: Shield,
+      activities: [t("methodologyPage.step4.act1"), t("methodologyPage.step4.act2"), t("methodologyPage.step4.act3"), t("methodologyPage.step4.act4"), t("methodologyPage.step4.act5")],
       tools: ["PowerShell Empire", "Mimikatz", "BloodHound", "CrackMapExec", "Covenant"],
-      deliverables: ["Mapa de movimento lateral", "Análise de dados sensíveis", "Relatório de persistência", "Chain de exploração completa"]
+      deliverables: [t("methodologyPage.step4.deliv1"), t("methodologyPage.step4.deliv2"), t("methodologyPage.step4.deliv3"), t("methodologyPage.step4.deliv4")]
     },
     {
-      phase: "5. Reporting", title: "Relatórios",
-      description: "Documentação executiva e técnica dos achados", icon: BarChart3,
-      activities: ["Análise de risco executiva", "Documentação técnica detalhada", "Priorização por criticidade", "Roadmap de remediação", "Apresentação para stakeholders"],
+      phase: t("methodologyPage.step5.phase"), title: t("methodologyPage.step5.title"),
+      description: t("methodologyPage.step5.description"), icon: BarChart3,
+      activities: [t("methodologyPage.step5.act1"), t("methodologyPage.step5.act2"), t("methodologyPage.step5.act3"), t("methodologyPage.step5.act4"), t("methodologyPage.step5.act5")],
       tools: ["Custom Templates", "Risk Matrices", "CVSS Calculator", "PowerBI", "Executive Dashboards"],
-      deliverables: ["Relatório executivo com ROI", "Relatório técnico com PoCs", "Plano de remediação priorizado", "Dashboard de métricas"]
+      deliverables: [t("methodologyPage.step5.deliv1"), t("methodologyPage.step5.deliv2"), t("methodologyPage.step5.deliv3"), t("methodologyPage.step5.deliv4")]
     },
     {
-      phase: "6. Retesting", title: "Reteste",
-      description: "Validação das correções implementadas", icon: CheckCircle,
-      activities: ["Validação de patches", "Teste de configurações", "Verificação de controles", "Assessment de melhoria", "Sign-off final"],
+      phase: t("methodologyPage.step6.phase"), title: t("methodologyPage.step6.title"),
+      description: t("methodologyPage.step6.description"), icon: CheckCircle,
+      activities: [t("methodologyPage.step6.act1"), t("methodologyPage.step6.act2"), t("methodologyPage.step6.act3"), t("methodologyPage.step6.act4"), t("methodologyPage.step6.act5")],
       tools: ["Targeted Scanning", "Manual Testing", "Automated Validation", "Custom Scripts"],
-      deliverables: ["Relatório de reteste", "Status de remediação", "Certificado de melhoria", "Recomendações finais"]
+      deliverables: [t("methodologyPage.step6.deliv1"), t("methodologyPage.step6.deliv2"), t("methodologyPage.step6.deliv3"), t("methodologyPage.step6.deliv4")]
     }
   ];
 
   const serviceMethodologies = [
     {
-      service: "SOC - Security Operations Center", icon: Shield,
-      framework: "NIST Cybersecurity Framework + MITRE ATT&CK",
+      service: t("methodologyPage.socMethod.service"), icon: Shield,
+      framework: t("methodologyPage.socMethod.framework"),
       phases: [
-        { name: "Identify", activities: ["Asset Discovery", "Risk Assessment", "Governance", "Business Environment"] },
-        { name: "Protect", activities: ["Access Control", "Awareness Training", "Data Security", "Maintenance"] },
-        { name: "Detect", activities: ["Anomaly Detection", "Security Monitoring", "Detection Processes"] },
-        { name: "Respond", activities: ["Response Planning", "Communications", "Analysis", "Mitigation", "Improvements"] },
-        { name: "Recover", activities: ["Recovery Planning", "Improvements", "Communications"] }
+        { name: t("methodologyPage.socMethod.phase1"), activities: [t("methodologyPage.socMethod.p1a1"), t("methodologyPage.socMethod.p1a2"), t("methodologyPage.socMethod.p1a3"), t("methodologyPage.socMethod.p1a4")] },
+        { name: t("methodologyPage.socMethod.phase2"), activities: [t("methodologyPage.socMethod.p2a1"), t("methodologyPage.socMethod.p2a2"), t("methodologyPage.socMethod.p2a3"), t("methodologyPage.socMethod.p2a4")] },
+        { name: t("methodologyPage.socMethod.phase3"), activities: [t("methodologyPage.socMethod.p3a1"), t("methodologyPage.socMethod.p3a2"), t("methodologyPage.socMethod.p3a3")] },
+        { name: t("methodologyPage.socMethod.phase4"), activities: [t("methodologyPage.socMethod.p4a1"), t("methodologyPage.socMethod.p4a2"), t("methodologyPage.socMethod.p4a3"), t("methodologyPage.socMethod.p4a4"), t("methodologyPage.socMethod.p4a5")] },
+        { name: t("methodologyPage.socMethod.phase5"), activities: [t("methodologyPage.socMethod.p5a1"), t("methodologyPage.socMethod.p5a2"), t("methodologyPage.socMethod.p5a3")] }
       ]
     },
     {
-      service: "Gestão de Vulnerabilidades", icon: Target,
-      framework: "NIST SP 800-40 + ISO 27001",
+      service: t("methodologyPage.vulnMethod.service"), icon: Target,
+      framework: t("methodologyPage.vulnMethod.framework"),
       phases: [
-        { name: "Asset Management", activities: ["Discovery", "Inventory", "Classification", "Ownership"] },
-        { name: "Vulnerability Assessment", activities: ["Scanning", "Testing", "Analysis", "Prioritization"] },
-        { name: "Risk Analysis", activities: ["CVSS Scoring", "Business Impact", "Threat Context", "Risk Rating"] },
-        { name: "Remediation", activities: ["Planning", "Implementation", "Validation", "Documentation"] },
-        { name: "Reporting", activities: ["Metrics", "Dashboards", "Executive Reports", "Compliance"] }
+        { name: t("methodologyPage.vulnMethod.phase1"), activities: [t("methodologyPage.vulnMethod.p1a1"), t("methodologyPage.vulnMethod.p1a2"), t("methodologyPage.vulnMethod.p1a3"), t("methodologyPage.vulnMethod.p1a4")] },
+        { name: t("methodologyPage.vulnMethod.phase2"), activities: [t("methodologyPage.vulnMethod.p2a1"), t("methodologyPage.vulnMethod.p2a2"), t("methodologyPage.vulnMethod.p2a3"), t("methodologyPage.vulnMethod.p2a4")] },
+        { name: t("methodologyPage.vulnMethod.phase3"), activities: [t("methodologyPage.vulnMethod.p3a1"), t("methodologyPage.vulnMethod.p3a2"), t("methodologyPage.vulnMethod.p3a3"), t("methodologyPage.vulnMethod.p3a4")] },
+        { name: t("methodologyPage.vulnMethod.phase4"), activities: [t("methodologyPage.vulnMethod.p4a1"), t("methodologyPage.vulnMethod.p4a2"), t("methodologyPage.vulnMethod.p4a3"), t("methodologyPage.vulnMethod.p4a4")] },
+        { name: t("methodologyPage.vulnMethod.phase5"), activities: [t("methodologyPage.vulnMethod.p5a1"), t("methodologyPage.vulnMethod.p5a2"), t("methodologyPage.vulnMethod.p5a3"), t("methodologyPage.vulnMethod.p5a4")] }
       ]
     }
   ];
