@@ -174,9 +174,11 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button variant="outline" className="w-full">
-                    {t("home.learnMore")}
-                  </Button>
+                  <Link to="/servicos">
+                    <Button variant="outline" className="w-full">
+                      {t("home.learnMore")}
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
