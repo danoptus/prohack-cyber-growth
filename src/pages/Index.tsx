@@ -110,14 +110,14 @@ const Index = () => {
 
             {/* Trust Signals */}
             <div className="flex flex-wrap items-center gap-8 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2">
+              <a href="https://www.iso.org/standard/27001" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <CheckCircle size={16} className="text-secondary" />
                 <span>{t("home.trustIso")}</span>
-              </div>
-              <div className="flex items-center gap-2">
+              </a>
+              <a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-primary transition-colors">
                 <CheckCircle size={16} className="text-secondary" />
                 <span>{t("home.trustNist")}</span>
-              </div>
+              </a>
               <div className="flex items-center gap-2">
                 <CheckCircle size={16} className="text-secondary" />
                 <span>{t("home.trustLgpd")}</span>
@@ -151,7 +151,8 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="heading-lg mb-4">{t("home.servicesTitle")}</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              {t("home.servicesSubtitle")}
+              {t("home.servicesSubtitle")}{" "}
+              <Link to="/metodologia" className="text-primary hover:underline">{t("home.learnMore")}</Link>
             </p>
           </div>
 
@@ -174,9 +175,11 @@ const Index = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button variant="outline" className="w-full">
-                    {t("home.learnMore")}
-                  </Button>
+                  <Link to="/servicos">
+                    <Button variant="outline" className="w-full">
+                      {t("home.learnMore")}
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}
@@ -214,12 +217,12 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contato">
+            <Link to="/contato">
               <Button className="btn-cyber text-lg px-8 py-4">
                 {t("home.ctaButton")}
                 <ArrowRight className="ml-2" size={20} />
               </Button>
-            </a>
+            </Link>
             
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
               <Button variant="outline" className="btn-secondary text-lg px-8 py-4">
