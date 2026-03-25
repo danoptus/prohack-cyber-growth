@@ -1,8 +1,11 @@
 import { ArrowRight, Shield, Zap, Target, Clock, CheckCircle, AlertTriangle } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroImage from "@/assets/hero-cyber.jpg";
 import { useTranslation } from "react-i18next";
+import SEOHead from "@/components/SEOHead";
+import { organizationSchema, websiteSchema, faqSchema, professionalServiceSchema, breadcrumbSchema } from "@/lib/seo-schemas";
 
 const Index = () => {
   const { t } = useTranslation();
@@ -49,8 +52,16 @@ const Index = () => {
     { question: t("home.faq4q"), answer: t("home.faq4a") }
   ];
 
+  const faqJsonLd = faqSchema(faqs);
+
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="ProHack - Cybersecurity com Precisão e Resultado | Pentest, SOC, vCISO"
+        description="Consultoria em cybersecurity B2B: Pentest, SOC 24/7, Resposta a Incidentes, vCISO e Gestão de Vulnerabilidades. Métricas que o board entende. ISO 27001, NIST CSF, LGPD."
+        keywords="cybersecurity, pentest, penetration testing, SOC, consultoria cybersecurity, segurança da informação, resposta a incidentes, vCISO, gestão vulnerabilidades, LGPD, ISO 27001, SOC 24/7, teste de invasão, segurança cibernética São Paulo"
+        jsonLd={[organizationSchema, websiteSchema, professionalServiceSchema(), faqJsonLd, breadcrumbSchema([{ name: "Home", url: "/" }])]}
+      />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center cyber-grid">
         <div className="absolute inset-0">

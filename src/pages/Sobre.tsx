@@ -2,6 +2,8 @@ import { Target, Shield, Users, Award, CheckCircle, ArrowRight, Brain, Zap, Hear
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTranslation } from "react-i18next";
+import SEOHead from "@/components/SEOHead";
+import { breadcrumbSchema } from "@/lib/seo-schemas";
 
 const Sobre = () => {
   const { t } = useTranslation();
@@ -56,6 +58,12 @@ const Sobre = () => {
 
   return (
     <div className="min-h-screen py-20">
+      <SEOHead
+        title="Sobre a ProHack | Consultoria Especializada em Cybersecurity"
+        description="Conheça a ProHack: consultoria B2B em cybersecurity com foco em resultados mensuráveis. Equipe certificada OSCP, OSCE, CISM, CISSP. ISO 27001 e NIST CSF."
+        keywords="sobre ProHack, equipe cybersecurity, consultoria segurança, certificações OSCP, CISM, empresa cybersecurity São Paulo"
+        jsonLd={breadcrumbSchema([{ name: "Home", url: "/" }, { name: "Sobre", url: "/sobre" }])}
+      />
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="heading-xl mb-6">{t("about.title")}</h1>

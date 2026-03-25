@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useTranslation } from "react-i18next";
+import SEOHead from "@/components/SEOHead";
+import { breadcrumbSchema } from "@/lib/seo-schemas";
 
 const Cases = () => {
   const { t } = useTranslation();
@@ -65,6 +67,12 @@ const Cases = () => {
 
   return (
     <div className="min-h-screen py-20">
+      <SEOHead
+        title="Cases de Cybersecurity | Resultados Reais em Segurança"
+        description="Conheça nossos cases de sucesso em cybersecurity: pentest em fintechs, SOC para healthcare, resposta a ransomware e mais. Resultados mensuráveis e comprovados."
+        keywords="cases cybersecurity, pentest fintech, SOC healthcare, resposta ransomware, resultados segurança, case study cybersecurity"
+        jsonLd={breadcrumbSchema([{ name: "Home", url: "/" }, { name: "Cases", url: "/cases" }])}
+      />
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="heading-xl mb-6">{t("cases.title")}</h1>

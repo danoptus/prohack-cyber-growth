@@ -7,6 +7,8 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Phone, Mail, MessageSquare, MapPin, Clock, AlertTriangle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from "react-i18next";
+import SEOHead from "@/components/SEOHead";
+import { breadcrumbSchema } from "@/lib/seo-schemas";
 
 const Contato = () => {
   const { toast } = useToast();
@@ -123,6 +125,12 @@ const Contato = () => {
 
   return (
     <div className="min-h-screen py-20">
+      <SEOHead
+        title="Contato | Fale com Especialistas em Cybersecurity"
+        description="Entre em contato com a ProHack. Solicite uma proposta de pentest, SOC, vCISO ou resposta a incidentes. Atendimento 24/7 via WhatsApp para emergências de segurança."
+        keywords="contato cybersecurity, solicitar pentest, proposta SOC, consultoria segurança, emergência cybersecurity, WhatsApp segurança"
+        jsonLd={breadcrumbSchema([{ name: "Home", url: "/" }, { name: "Contato", url: "/contato" }])}
+      />
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="heading-xl mb-6">{t("contact.title")}</h1>
