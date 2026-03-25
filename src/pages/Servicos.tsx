@@ -186,8 +186,18 @@ const Servicos = () => {
     }
   ];
 
+  const servicesJsonLd = services.map((s) =>
+    serviceSchema({ name: s.title, description: s.description, url: `/servicos#${s.id}` })
+  );
+
   return (
     <div className="min-h-screen py-20">
+      <SEOHead
+        title="Serviços de Cybersecurity | Pentest, SOC, vCISO, Resposta a Incidentes"
+        description="Serviços especializados em cybersecurity: Penetration Testing, SOC 24/7, Gestão de Vulnerabilidades, Resposta a Incidentes, vCISO e Consultoria. Resultados mensuráveis para sua empresa."
+        keywords="serviços cybersecurity, pentest empresarial, SOC as a service, vCISO, gestão vulnerabilidades, resposta incidentes, consultoria segurança informação, teste invasão"
+        jsonLd={[...servicesJsonLd, breadcrumbSchema([{ name: "Home", url: "/" }, { name: "Serviços", url: "/servicos" }])]}
+      />
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">

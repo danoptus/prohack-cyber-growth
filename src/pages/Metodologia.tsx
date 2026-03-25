@@ -80,6 +80,12 @@ const Metodologia = () => {
 
   return (
     <div className="min-h-screen py-20">
+      <SEOHead
+        title="Metodologia de Cybersecurity | Pentest Kill Chain & Frameworks"
+        description="Conheça nossa metodologia baseada em Cyber Kill Chain, MITRE ATT&CK, OWASP, NIST CSF e ISO 27001. Abordagem sistemática para testes de segurança e proteção corporativa."
+        keywords="metodologia pentest, cyber kill chain, MITRE ATT&CK, OWASP, NIST CSF, ISO 27001, metodologia segurança, frameworks cybersecurity"
+        jsonLd={breadcrumbSchema([{ name: "Home", url: "/" }, { name: "Metodologia", url: "/metodologia" }])}
+      />
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h1 className="heading-xl mb-6">{t("methodology.title")}</h1>
