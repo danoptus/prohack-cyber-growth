@@ -57,8 +57,8 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="ProHack - Cybersecurity com Precisão e Resultado | Pentest, SOC, vCISO"
-        description="Consultoria em cybersecurity B2B: Pentest, SOC 24/7, Resposta a Incidentes, vCISO e Gestão de Vulnerabilidades. Métricas que o board entende. ISO 27001, NIST CSF, LGPD."
+        title="ProHack | Cybersecurity B2B: Pentest, SOC, vCISO"
+        description="Consultoria em cybersecurity B2B: Pentest, SOC 24/7, Resposta a Incidentes e vCISO. Métricas que o board entende. ISO 27001, NIST CSF, LGPD."
         keywords="cybersecurity, pentest, penetration testing, SOC, consultoria cybersecurity, segurança da informação, resposta a incidentes, vCISO, gestão vulnerabilidades, LGPD, ISO 27001, SOC 24/7, teste de invasão, segurança cibernética São Paulo"
         jsonLd={[organizationSchema, websiteSchema, professionalServiceSchema(), faqJsonLd, breadcrumbSchema([{ name: "Home", url: "/" }])]}
       />
